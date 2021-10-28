@@ -1,0 +1,16 @@
+---
+- name: grandchild playbook
+  gather_facts: false
+  hosts: localhost
+  remote_user: root
+  become: true
+
+  tasks:
+
+    - name: grandchild play
+      ansible.builtin.debug:
+        msg: "Grandchild Play"
+
+    - name: grandchild task
+      import_tasks: tasks/main.yml
+

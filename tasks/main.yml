@@ -1,0 +1,5 @@
+---
+# tasks file for nested_grandchild
+- name: grandchild task
+  ansible.builtin.debug:
+    msg: "grandchild task"
